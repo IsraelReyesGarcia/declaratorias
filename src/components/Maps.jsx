@@ -10,13 +10,14 @@ import { Polygon } from "react-leaflet/Polygon";
 import { Rectangle } from "react-leaflet/Rectangle";
 import { GeoJSON } from "react-leaflet/GeoJSON";
 import "leaflet/dist/leaflet.css";
+import "leaflet/dist/leaflet";
 
 import { statesData } from "../assets/geojson/us-states";
 import { mexico } from "../assets/geojson/mexico";
 import { estados } from "../assets/geojson/estados";
 import { municipios } from '../assets/geojson/municipios';
-import './styles/Maps.css';
-
+/* import './styles/Maps.css';
+ */
 const Maps = () => {
   const center = [24.231086, -102.441822];
 
@@ -69,7 +70,7 @@ function resetHighlight(e) {
   const purpleOptions = { color: "purple" };
   const redOptions = { color: "red" };
   return (
-    <MapContainer className='leaflet-container' center={center} zoom={5} scrollWheelZoom={false}>
+    <MapContainer className='leaflet-container' style={{ width: '100vw', height: '100vh' }} center={center} zoom={5} scrollWheelZoom={false}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
