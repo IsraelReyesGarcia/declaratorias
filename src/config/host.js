@@ -1,0 +1,1 @@
+export const _HOST_ = 'localhost';
